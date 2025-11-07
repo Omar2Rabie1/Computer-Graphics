@@ -1,6 +1,7 @@
 // Quiz questions data
+// Quiz questions data
 const questions = [
-  // Unit 1 Questions (1–50)
+  // =============== UNIT 1 (1–50) ===============
   {
     question: "Computer Graphics is the field of computer science that deals with:",
     options: [
@@ -562,7 +563,7 @@ const questions = [
     isCorrect: null
   },
 
-  // Unit 2.1 Questions (51–80)
+  // =============== UNIT 2.1 (51–80) ===============
   {
     question: "What is the fundamental element of picture representation in computer graphics?",
     options: ["Line", "Polygon", "Point", "Circle"],
@@ -579,12 +580,7 @@ const questions = [
   },
   {
     question: "The equation of a line in slope-intercept form is:",
-    options: [
-      "y = mx + c",
-      "y = bx + m",
-      "y = m + bx",
-      "y = y1 + mx"
-    ],
+    options: ["y = mx + c", "y = bx + m", "y = m + bx", "y = y1 + mx"],
     correctAnswer: 0,
     userAnswer: null,
     isCorrect: null
@@ -627,12 +623,7 @@ const questions = [
   },
   {
     question: "Which of the following methods uses decimal (floating-point) arithmetic and is slow for computer graphics?",
-    options: [
-      "Slope-Intercept",
-      "Parametric Form",
-      "DDA",
-      "Bresenham’s Algorithm"
-    ],
+    options: ["Slope-Intercept", "Parametric Form", "DDA", "Bresenham’s Algorithm"],
     correctAnswer: 0,
     userAnswer: null,
     isCorrect: null
@@ -689,12 +680,7 @@ const questions = [
   },
   {
     question: "The DDA algorithm is based on:",
-    options: [
-      "Incremental method",
-      "Slope-Intercept method",
-      "Derivative method",
-      "Tangent method"
-    ],
+    options: ["Incremental method", "Slope-Intercept method", "Derivative method", "Tangent method"],
     correctAnswer: 0,
     userAnswer: null,
     isCorrect: null
@@ -713,24 +699,14 @@ const questions = [
   },
   {
     question: "DDA eliminates multiplication by using:",
-    options: [
-      "Raster characteristics",
-      "Trigonometric functions",
-      "Complex numbers",
-      "Division operations"
-    ],
+    options: ["Raster characteristics", "Trigonometric functions", "Complex numbers", "Division operations"],
     correctAnswer: 0,
     userAnswer: null,
     isCorrect: null
   },
   {
     question: "A disadvantage of DDA is that it still uses:",
-    options: [
-      "Integer arithmetic",
-      "Floating point arithmetic",
-      "Matrix multiplication",
-      "Pixel shading"
-    ],
+    options: ["Integer arithmetic", "Floating point arithmetic", "Matrix multiplication", "Pixel shading"],
     correctAnswer: 1,
     userAnswer: null,
     isCorrect: null
@@ -768,12 +744,7 @@ const questions = [
   },
   {
     question: "Which method uses the concept of parameter t between 0 and 1?",
-    options: [
-      "Slope-Intercept",
-      "Parametric Form",
-      "DDA",
-      "Bresenham"
-    ],
+    options: ["Slope-Intercept", "Parametric Form", "DDA", "Bresenham"],
     correctAnswer: 1,
     userAnswer: null,
     isCorrect: null
@@ -818,24 +789,14 @@ const questions = [
   },
   {
     question: "The process of turning on pixels for a line segment is called:",
-    options: [
-      "Rasterization",
-      "Vector generation",
-      "Line plotting",
-      "Rendering"
-    ],
+    options: ["Rasterization", "Line plotting", "Vector generation", "Rendering"],
     correctAnswer: 1,
     userAnswer: null,
     isCorrect: null
   },
   {
     question: "The y-intercept (b) can be calculated as:",
-    options: [
-      "b = y1 - mx1",
-      "b = y2 - mx1",
-      "b = y1 - x1",
-      "b = m + y1"
-    ],
+    options: ["b = y1 - mx1", "b = y2 - mx1", "b = y1 - x1", "b = m + y1"],
     correctAnswer: 0,
     userAnswer: null,
     isCorrect: null
@@ -861,12 +822,7 @@ const questions = [
   },
   {
     question: "DDA algorithm can be implemented as:",
-    options: [
-      "Software only",
-      "Hardware and Software",
-      "Hardware only",
-      "None"
-    ],
+    options: ["Software only", "Hardware and Software", "Hardware only", "None"],
     correctAnswer: 1,
     userAnswer: null,
     isCorrect: null
