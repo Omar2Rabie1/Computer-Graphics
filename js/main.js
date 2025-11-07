@@ -1,5 +1,4 @@
 // Quiz questions data
-// Quiz questions data
 const questions = [
   // =============== UNIT 1 (1–50) ===============
   {
@@ -829,6 +828,378 @@ const questions = [
   },
   {
     question: "DDA stands for ‘Digital Differential Analyzer’.",
+    options: ["True", "False"],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+
+  // =============== UNIT 2.2 (81–120) ===============
+  {
+    question: "The Bresenham’s Line Algorithm is used to:",
+    options: [
+      "Draw smooth curves",
+      "Generate straight lines using integer arithmetic",
+      "Create circle patterns",
+      "Perform anti-aliasing"
+    ],
+    correctAnswer: 1,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "The Bresenham algorithm is an improvement over:",
+    options: [
+      "DDA (Digital Differential Analyzer)",
+      "Slope-Intercept method",
+      "Midpoint circle algorithm",
+      "Raster scanning"
+    ],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "The main advantage of Bresenham’s algorithm over DDA is that it:",
+    options: [
+      "Uses only integer arithmetic",
+      "Requires floating-point operations",
+      "Is less efficient",
+      "Uses trigonometric functions"
+    ],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "The Bresenham’s line algorithm determines:",
+    options: [
+      "Which pixel is closest to the mathematical line path",
+      "Which polygon edge is visible",
+      "Which vertex to delete",
+      "Which color to fill"
+    ],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "True or False: Bresenham’s Line Algorithm uses only integer addition, subtraction, and bit shifting.",
+    options: ["True", "False"],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "The Bresenham’s algorithm works best when the slope of the line satisfies:",
+    options: ["|m| < 1", "|m| > 1", "m = 1 only", "m = 0 only"],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "When |m| > 1, the Bresenham’s algorithm must:",
+    options: [
+      "Interchange the role of x and y",
+      "Ignore y values",
+      "Reduce Δx",
+      "Increase step size"
+    ],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "The decision parameter (p₀) for Bresenham’s algorithm is initially computed as:",
+    options: ["2Δy − Δx", "Δy − 2Δx", "2Δx − Δy", "Δx − Δy"],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "The purpose of the decision parameter (pₖ) is to:",
+    options: [
+      "Decide whether to move vertically or diagonally",
+      "Calculate the line slope",
+      "Store pixel intensity",
+      "Handle transformations"
+    ],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "If the decision parameter pₖ < 0, the next pixel chosen is:",
+    options: ["(xₖ+1, yₖ+1)", "(xₖ+1, yₖ)", "(xₖ, yₖ+1)", "(xₖ−1, yₖ)"],
+    correctAnswer: 1,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "If the decision parameter pₖ ≥ 0, the next pixel chosen is:",
+    options: ["(xₖ+1, yₖ)", "(xₖ+1, yₖ+1)", "(xₖ, yₖ−1)", "(xₖ−1, yₖ+1)"],
+    correctAnswer: 1,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "The recurrence relation for updating the decision parameter is:",
+    options: [
+      "pₖ₊₁ = pₖ + 2Δy",
+      "pₖ₊₁ = pₖ + 2Δy − 2Δx",
+      "pₖ₊₁ = pₖ + 2Δy − 2Δx (if pₖ ≥ 0) else pₖ + 2Δy",
+      "pₖ₊₁ = pₖ + Δx"
+    ],
+    correctAnswer: 2,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "True or False: The Bresenham algorithm uses floating-point multiplication.",
+    options: ["True", "False"],
+    correctAnswer: 1,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "In Bresenham’s line algorithm, Δx and Δy represent:",
+    options: [
+      "Changes in brightness",
+      "Differences between the end points in x and y directions",
+      "Changes in slope",
+      "Pixel color intensity"
+    ],
+    correctAnswer: 1,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "If Δx = 10 and Δy = 5, then the slope (m) is:",
+    options: ["0.5", "2", "5", "10"],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "When pₖ ≥ 0, y is incremented by:",
+    options: ["0", "1", "2", "-1"],
+    correctAnswer: 1,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "When pₖ < 0, y remains:",
+    options: ["Constant", "Incremented by 2", "Decremented", "Randomly changed"],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "The algorithm is known for generating lines with:",
+    options: [
+      "Smooth curves",
+      "High accuracy and no floating errors",
+      "Color gradients",
+      "Anti-aliased output"
+    ],
+    correctAnswer: 1,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "True or False: Bresenham’s algorithm can be used for both line and circle generation.",
+    options: ["True", "False"],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "Bresenham’s Line Algorithm is a type of:",
+    options: [
+      "Incremental raster line algorithm",
+      "Recursive method",
+      "Trigonometric function-based method",
+      "Differential analyzer"
+    ],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "The advantage of using integer arithmetic is:",
+    options: [
+      "Speed and accuracy on raster displays",
+      "More memory usage",
+      "Better for floating points",
+      "Slower performance"
+    ],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "The Bresenham’s algorithm ensures the line:",
+    options: [
+      "Passes through the midpoint of all pixels",
+      "Appears continuous on the raster grid",
+      "Uses random pixel positions",
+      "Ignores pixel alignment"
+    ],
+    correctAnswer: 1,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "True or False: Bresenham’s algorithm always produces symmetrical lines for opposite octants.",
+    options: ["True", "False"],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "The algorithm can be extended to draw:",
+    options: ["Circles and ellipses", "Only straight vertical lines", "Only diagonal lines", "3D models"],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "The algorithm selects between two possible pixel positions:",
+    options: ["Lower and upper", "Left and right", "Next horizontal or next diagonal", "Random"],
+    correctAnswer: 2,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "For a line with negative slope (m < 0), the algorithm:",
+    options: [
+      "Decreases y while increasing x",
+      "Increases both x and y",
+      "Keeps y constant",
+      "Decreases both x and y"
+    ],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "True or False: Bresenham’s algorithm can draw vertical and horizontal lines without modification.",
+    options: ["True", "False"],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "For a horizontal line, Δy = 0.",
+    options: ["True", "False"],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "For a vertical line, Δx = 0.",
+    options: ["True", "False"],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "When slope (m) = 1, the line is drawn at:",
+    options: ["30°", "45°", "60°", "90°"],
+    correctAnswer: 1,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "The algorithm reduces round-off errors by:",
+    options: [
+      "Avoiding floating-point computation",
+      "Using decimal representation",
+      "Averaging pixel positions",
+      "Increasing resolution"
+    ],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "The algorithm’s efficiency comes from:",
+    options: [
+      "Incremental integer calculations",
+      "Recursive steps",
+      "Recalculating slope every step",
+      "Using trigonometry"
+    ],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "True or False: Bresenham’s line algorithm guarantees the same output on any raster device.",
+    options: ["True", "False"],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "The algorithm handles all possible slopes by:",
+    options: [
+      "Reflecting the line across octants",
+      "Using a fixed direction",
+      "Scaling pixels",
+      "Ignoring y values"
+    ],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "For a line drawn from left to right, the x coordinate always:",
+    options: ["Increases", "Decreases", "Alternates", "Remains constant"],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "True or False: In Bresenham’s line algorithm, each iteration plots exactly one pixel.",
+    options: ["True", "False"],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "The efficiency of the algorithm makes it suitable for:",
+    options: [
+      "Real-time graphics applications",
+      "Audio processing",
+      "Image compression",
+      "Video decoding"
+    ],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "If Δx = 8 and Δy = 3, the initial decision parameter p₀ = 2Δy − Δx = ?",
+    options: ["2", "-2", "4", "-4"],
+    correctAnswer: 1,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "The Bresenham algorithm’s decision parameter (pₖ) controls:",
+    options: [
+      "The choice of the next pixel",
+      "Line color",
+      "Lighting intensity",
+      "Texture mapping"
+    ],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "True or False: Bresenham’s Line Algorithm is widely used in hardware graphics implementations.",
     options: ["True", "False"],
     correctAnswer: 0,
     userAnswer: null,
