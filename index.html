@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computer Graphics Quiz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Computer Graphics Quiz</h1>
+            <div class="subtitle">Test your knowledge of fundamental computer graphics concepts</div>
+        </header>
+        
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        
+        <div class="quiz-container" id="quizContainer">
+            <div class="question-number" id="questionNumber">Question 1 of 26</div>
+            <div class="question-text" id="questionText"></div>
+            
+            <div class="options-container" id="optionsContainer">
+                <!-- Options will be populated dynamically -->
+            </div>
+            
+            <div class="feedback" id="feedback"></div>
+            
+            <div class="navigation">
+                <button id="prevBtn" disabled>Previous</button>
+                <button id="nextBtn">Next</button>
+            </div>
+        </div>
+        
+        <div class="result-container" id="resultContainer">
+            <h2>You've completed the quiz!</h2>
+            <div class="score" id="finalScore">0/26</div>
+            <div class="score-text" id="scoreText"></div>
+            <button class="restart-btn" id="restartBtn">Restart Quiz</button>
+        </div>
+    </div>
+   <script src="./js/main.js"></script>
+</body>
+</html>
