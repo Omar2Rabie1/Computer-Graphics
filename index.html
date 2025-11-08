@@ -19,7 +19,7 @@
         </div>
         
         <div class="quiz-container" id="quizContainer">
-            <div class="question-number" id="questionNumber">Question 1 of 26</div>
+            <div class="question-number" id="questionNumber">Question 1 of 145</div>
             <div class="question-text" id="questionText"></div>
             
             <div class="options-container" id="optionsContainer">
@@ -30,31 +30,27 @@
             
             <div class="navigation">
                 <button id="prevBtn" disabled>Previous</button>
+                <button id="jumpBtn">Go to Question</button>
                 <button id="nextBtn">Next</button>
+            </div>
+
+            <div class="jump-menu" id="jumpMenu" style="display: none; margin-top: 15px; text-align: center;">
+                <select id="questionSelect">
+                    <!-- Will be filled by JavaScript -->
+                </select>
+                <button id="goToBtn" style="margin-right: 10px;">Go</button>
+                <button id="cancelJumpBtn">Cancel</button>
             </div>
         </div>
         
         <div class="result-container" id="resultContainer">
             <h2>You've completed the quiz!</h2>
-            <div class="score" id="finalScore">0/26</div>
+            <div class="score" id="finalScore">0/145</div>
             <div class="score-text" id="scoreText"></div>
             <button class="restart-btn" id="restartBtn">Restart Quiz</button>
         </div>
-        <div class="navigation">
-    <button id="prevBtn" disabled>Previous</button>
-    <button id="jumpBtn">Go to Question</button>
-    <button id="nextBtn">Next</button>
-</div>
-
-<!-- القائمة المنسدلة (مخفيّة افتراضيًا) -->
-<div class="jump-menu" id="jumpMenu" style="display: none; margin-top: 15px; text-align: center;">
-    <select id="questionSelect">
-        <!-- سيتم ملؤها ديناميكيًا بالجافاسكربت -->
-    </select>
-    <button id="goToBtn" style="margin-right: 10px;">Go</button>
-    <button id="cancelJumpBtn">Cancel</button>
-</div>
     </div>
- <script src="./js/main.js"></script>
+    
+    <script src="./js/main.js"></script>
 </body>
 </html>
