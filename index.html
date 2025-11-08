@@ -40,6 +40,20 @@
             <div class="score-text" id="scoreText"></div>
             <button class="restart-btn" id="restartBtn">Restart Quiz</button>
         </div>
+        <div class="navigation">
+    <button id="prevBtn" disabled>Previous</button>
+    <button id="jumpBtn">Go to Question</button>
+    <button id="nextBtn">Next</button>
+</div>
+
+<!-- القائمة المنسدلة (مخفيّة افتراضيًا) -->
+<div class="jump-menu" id="jumpMenu" style="display: none; margin-top: 15px; text-align: center;">
+    <select id="questionSelect">
+        <!-- سيتم ملؤها ديناميكيًا بالجافاسكربت -->
+    </select>
+    <button id="goToBtn" style="margin-right: 10px;">Go</button>
+    <button id="cancelJumpBtn">Cancel</button>
+</div>
     </div>
  <script src="./js/main.js"></script>
 </body>
