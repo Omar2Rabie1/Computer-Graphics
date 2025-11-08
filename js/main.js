@@ -1204,6 +1204,292 @@ const questions = [
     correctAnswer: 0,
     userAnswer: null,
     isCorrect: null
+  },
+    // =============== MID-POINT CIRCLE ALGORITHM (from Document 7.pdf) ===============
+  {
+    question: "What is the fundamental reason for utilizing eight-way symmetry in the Mid-Point Circle Algorithm?",
+    options: [
+      "It eliminates the need for multiplication and square root operations",
+      "It calculates points for only one-eighth of the circle, with the rest determined by reflection",
+      "It ensures the circle is perfectly round by averaging points from eight octants",
+      "It allows the algorithm to start from any point on the circle's circumference"
+    ],
+    correctAnswer: 1,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "In the Mid-Point Circle Algorithm, if the current pixel is (xk, yk) and the decision parameter pk < 0, what are the coordinates of the next pixel?",
+    options: [
+      "(xk+1, yk+1)",
+      "(xk+1, yk)",
+      "(xk, yk-1)",
+      "(xk+1, yk-1)"
+    ],
+    correctAnswer: 1,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "The simple circle drawing algorithm using the equation y = ±√(r² - x²) has a significant visual flaw. What is it?",
+    options: [
+      "It produces large gaps between pixels where the circle's slope is steep",
+      "It generates overlapping pixels, making the line appear too thick",
+      "It can only draw filled circles, not outlines",
+      "It draws a shape that is more elliptical than circular"
+    ],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "What is the initial value of the decision parameter, p₀, for the Mid-Point Circle Algorithm if the radius 'r' is an integer?",
+    options: [
+      "r",
+      "1 - r",
+      "0",
+      "-1"
+    ],
+    correctAnswer: 1,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "If the current decision parameter is pk ≥ 0, which formula is used to calculate the next decision parameter pk+1?",
+    options: [
+      "pk+1 = pk + 2xk+1 + 1 - 2yk+1",
+      "pk+1 = pk - 2yk+1 + 1",
+      "pk+1 = pk + 2xk+1 + 1",
+      "pk+1 = pk + 2Δy - 2Δx"
+    ],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "In the example of drawing a circle with radius r = 10, the algorithm starts with p₀ = -9. At step k = 0, the next point is (1, 10). What is the value of p₁?",
+    options: ["-26", "-8", "-6", "-9"],
+    correctAnswer: 2,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "The Mid-Point Circle Algorithm calculates points for one octant and then stops. What is the condition that terminates this calculation loop?",
+    options: [
+      "x ≥ y",
+      "pk = 0",
+      "y < 0",
+      "x > r"
+    ],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "The decision in the Mid-Point algorithm is based on evaluating the circle function fcircle(x, y) = x² + y² - r² at which specific location?",
+    options: [
+      "(xk+1, yk): The candidate pixel above",
+      "(xk, yk): The current pixel location",
+      "(xk+1, yk - 0.5): The midpoint between the two candidate pixels",
+      "(0, 0): The origin"
+    ],
+    correctAnswer: 2,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "If a point (x, y) is plotted in the first octant, which of the following is NOT one of its seven symmetric points?",
+    options: [
+      "(-x, y)",
+      "(-x, -y + 1)",
+      "(x, -y)",
+      "(y, x)"
+    ],
+    correctAnswer: 1,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "In an example with r = 10, p₃ = 6. What is p₄ if the next point is (4, 9)?",
+    options: ["-3", "6", "15", "25"],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "The Mid-Point Circle Algorithm is considered an 'incremental' algorithm. What does this mean?",
+    options: [
+      "The algorithm's complexity increases with each pixel plotted",
+      "It can only draw circles with an integer radius that increments by 1",
+      "It draws the circle by gradually increasing the pixel brightness",
+      "Each step's calculation is based on the results of the previous step"
+    ],
+    correctAnswer: 3,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "What is the very first point plotted by the Mid-Point Circle Algorithm for a circle of radius 'r' centered at the origin?",
+    options: [
+      "(1, r)",
+      "(r, 0)",
+      "(0, r)",
+      "(0, 0)"
+    ],
+    correctAnswer: 2,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "If fcircle(x, y) = x² + y² - r² > 0, where is the point (x, y) located?",
+    options: [
+      "Exactly on the circle boundary",
+      "Outside the circle boundary",
+      "At the center of the circle",
+      "Inside the circle boundary"
+    ],
+    correctAnswer: 1,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "In the example with r = 10, the final calculated point for the first octant is (7, 7). Why does the algorithm stop here?",
+    options: [
+      "Because the point (8, 6) is outside the circle boundary",
+      "Because the condition x ≥ y is now met",
+      "Because the decision parameter becomes positive for the first time",
+      "Because the next y-value would be less than half the radius"
+    ],
+    correctAnswer: 1,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "After the algorithm calculates a point (x, y) for the first octant of a circle centered at (xc, yc), how is the final screen coordinate determined?",
+    options: [
+      "(x, y): The final coordinates are already correct",
+      "(y + yc, x + xc): By swapping the coordinates",
+      "(x * xc, y * yc): By multiplying by the center coordinates",
+      "(x + xc, y + yc): By adding the center coordinates"
+    ],
+    correctAnswer: 3,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "Which set of operations makes the simple circle algorithm (y = ±√(r² - x²)) computationally expensive compared to the Mid-Point algorithm?",
+    options: [
+      "Multiplication (squaring) and square roots",
+      "Addition and subtraction",
+      "Division and modulo operations",
+      "Trigonometric functions (sine and cosine)"
+    ],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "In the example table for r = 10, what does the column '2xk+1' represent?",
+    options: [
+      "The value of 2xk+1 to be used in the next decision parameter update",
+      "Twice the value of the current x-coordinate",
+      "The slope of the circle at that point",
+      "The distance from the origin"
+    ],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "What is the primary choice the algorithm must make at every step along the x-axis?",
+    options: [
+      "Whether to plot a point in the current octant or the next one",
+      "Whether the next pixel's y-coordinate should be yk or yk - 1",
+      "Whether the next pixel's x-coordinate should be xk or xk + 1",
+      "Whether the radius should be increased or decreased"
+    ],
+    correctAnswer: 1,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "If the point (5, 9) is on a circle centered at the origin, which of the following points is guaranteed to also be on the circle due to eight-way symmetry?",
+    options: [
+      "(5, -8)",
+      "(9, 6)",
+      "(-5, -8)",
+      "(9, -5)"
+    ],
+    correctAnswer: 3,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "In the example with r = 10, the algorithm proceeds from (3, 10) with p₂ = -1 to the point (4, 9) with p₃ = 6. What caused the y-coordinate to change?",
+    options: [
+      "The algorithm detected a large gap forming",
+      "It was a mistake in the example; y should have remained 10",
+      "The decision parameter p₃ became positive",
+      "The x-coordinate became greater than 3"
+    ],
+    correctAnswer: 2,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "What does the term 'yk - 0.5' represent in the Mid-Point Circle Algorithm?",
+    options: [
+      "The midpoint vertically between the two candidate y-pixels",
+      "It ensures the algorithm only uses integer arithmetic",
+      "It is an arbitrary value chosen to simplify the math",
+      "It corrects for the visual distortion of square pixels"
+    ],
+    correctAnswer: 0,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "What is the initial point (x₀, y₀) for the Mid-Point Circle Algorithm when drawing a circle with radius 20 centered at the origin?",
+    options: [
+      "(0, 0)",
+      "(1, 20)",
+      "(0, 20)",
+      "(20, 0)"
+    ],
+    correctAnswer: 2,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "If you use the Mid-Point Circle Algorithm to draw a circle with radius r = 5, what would be the initial decision parameter p₀?",
+    options: ["-3.75", "1", "-4", "0"],
+    correctAnswer: 2,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "The summary of the Mid-Point Circle Algorithm mentions two key insights. One is eight-way symmetry. What is the other?",
+    options: [
+      "The algorithm can be implemented without using any variables",
+      "All calculations must be done using floating-point numbers",
+      "At each x-step, there is a choice between only two possible y-coordinates",
+      "The circle's radius must be an even number"
+    ],
+    correctAnswer: 2,
+    userAnswer: null,
+    isCorrect: null
+  },
+  {
+    question: "In the Mid-Point Algorithm, why is it sufficient to calculate points only in the first octant (from x = 0 to x = y)?",
+    options: [
+      "The first octant contains the most visually important part of the circle",
+      "Calculating points outside this octant would require square roots",
+      "The computer's graphics hardware is optimized for this specific octant",
+      "All other points can be generated by reflecting and swapping the coordinates of the first octant's points"
+    ],
+    correctAnswer: 3,
+    userAnswer: null,
+    isCorrect: null
   }
 ];
 
