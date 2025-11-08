@@ -1506,7 +1506,11 @@ const progressBar = document.getElementById("progressBar");
 const finalScore = document.getElementById("finalScore");
 const scoreText = document.getElementById("scoreText");
 const restartBtn = document.getElementById("restartBtn");
-
+const jumpBtn = document.getElementById('jumpBtn');
+const jumpMenu = document.getElementById('jumpMenu');
+const questionSelect = document.getElementById('questionSelect');
+const goToBtn = document.getElementById('goToBtn');
+const cancelJumpBtn = document.getElementById('cancelJumpBtn');
 // Application state
 let currentQuestionIndex = 0;
 let score = 0;
@@ -1670,6 +1674,39 @@ function restartQuiz() {
   updateProgressBar();
   updateNavigationButtons();
 }
+
+// ملء قائمة الأسئلة ديناميكيًا
+function populateQuestionSelect() {
+    questionSelect.innerHTML = ''; // مسح الخيارات القديمة
+    for (let i = 1; i <= questions.length; i++) {
+        const option = document.createElement('option');
+        option.value = i - 1; // لأن الفهرس يبدأ من 0
+        option.textContent = `Question ${i}`;
+        questionSelect.appendChild(option);
+    }
+}
+
+// إظهار/إخفاء قائمة الانتقال
+jumpBtn.addEventListener('click', () => {
+    jumpMenu.style.display = 'block';
+    populateQuestionSelect();
+    questionSelect.value = currentQuestionIndex; // حدد السؤال الحالي كافتراضي
+});
+
+cancelJumpBtn.addEventListener('click', () => {
+    jumpMenu.style.display = 'none';
+});
+
+goToBtn.addEventListener('click', () => {
+    const newIndex = parseInt(questionSelect.value);
+    if (newIndex >= 0 && newIndex < questions.length) {
+        currentQuestionIndex = newIndex;
+        displayQuestion();
+        updateProgressBar();
+        updateNavigationButtons();
+        jumpMenu.style.display = 'none';
+    }
+});
 
 // Add event listeners
 prevBtn.addEventListener("click", goToPreviousQuestion);
