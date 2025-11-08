@@ -1,4 +1,4 @@
-// Quiz questions data
+// Quiz questions data (145 سؤال)
 const questions = [
   // =============== UNIT 1 (1–50) ===============
   {
@@ -1205,7 +1205,8 @@ const questions = [
     userAnswer: null,
     isCorrect: null
   },
-    // =============== MID-POINT CIRCLE ALGORITHM (from Document 7.pdf) ===============
+
+  // =============== MID-POINT CIRCLE ALGORITHM (from Document 7.pdf) ===============
   {
     question: "What is the fundamental reason for utilizing eight-way symmetry in the Mid-Point Circle Algorithm?",
     options: [
@@ -1223,7 +1224,7 @@ const questions = [
     options: [
       "(xk+1, yk+1)",
       "(xk+1, yk)",
-      "(xk, yk-1)",
+      "(xk, yk+1)",
       "(xk+1, yk-1)"
     ],
     correctAnswer: 1,
@@ -1244,12 +1245,7 @@ const questions = [
   },
   {
     question: "What is the initial value of the decision parameter, p₀, for the Mid-Point Circle Algorithm if the radius 'r' is an integer?",
-    options: [
-      "r",
-      "1 - r",
-      "0",
-      "-1"
-    ],
+    options: ["r", "1 - r", "0", "-1"],
     correctAnswer: 1,
     userAnswer: null,
     isCorrect: null
@@ -1258,7 +1254,7 @@ const questions = [
     question: "If the current decision parameter is pk ≥ 0, which formula is used to calculate the next decision parameter pk+1?",
     options: [
       "pk+1 = pk + 2xk+1 + 1 - 2yk+1",
-      "pk+1 = pk - 2yk+1 + 1",
+      "pk+1 = pk + 2Δy - 2Δx",
       "pk+1 = pk + 2xk+1 + 1",
       "pk+1 = pk + 2Δy - 2Δx"
     ],
@@ -1329,7 +1325,7 @@ const questions = [
     isCorrect: null
   },
   {
-    question: "What is the very first point plotted by the Mid-Point Circle Algorithm for a circle of radius 'r' centered at the origin?",
+    question: "The very first point plotted by the Mid-Point Circle Algorithm for a circle of radius 'r' centered at the origin?",
     options: [
       "(1, r)",
       "(r, 0)",
@@ -1401,7 +1397,7 @@ const questions = [
     isCorrect: null
   },
   {
-    question: "What is the primary choice the algorithm must make at every step along the x-axis?",
+    question: "The algorithm's primary choice at every step along the x-axis is:",
     options: [
       "Whether to plot a point in the current octant or the next one",
       "Whether the next pixel's y-coordinate should be yk or yk - 1",
@@ -1506,11 +1502,14 @@ const progressBar = document.getElementById("progressBar");
 const finalScore = document.getElementById("finalScore");
 const scoreText = document.getElementById("scoreText");
 const restartBtn = document.getElementById("restartBtn");
-const jumpBtn = document.getElementById('jumpBtn');
-const jumpMenu = document.getElementById('jumpMenu');
-const questionSelect = document.getElementById('questionSelect');
-const goToBtn = document.getElementById('goToBtn');
-const cancelJumpBtn = document.getElementById('cancelJumpBtn');
+
+// New DOM elements for Jump Menu
+const jumpBtn = document.getElementById("jumpBtn");
+const jumpMenu = document.getElementById("jumpMenu");
+const questionSelect = document.getElementById("questionSelect");
+const goToBtn = document.getElementById("goToBtn");
+const cancelJumpBtn = document.getElementById("cancelJumpBtn");
+
 // Application state
 let currentQuestionIndex = 0;
 let score = 0;
@@ -1675,37 +1674,36 @@ function restartQuiz() {
   updateNavigationButtons();
 }
 
-// ملء قائمة الأسئلة ديناميكيًا
+// Jump Menu Functions
 function populateQuestionSelect() {
-    questionSelect.innerHTML = ''; // مسح الخيارات القديمة
-    for (let i = 1; i <= questions.length; i++) {
-        const option = document.createElement('option');
-        option.value = i - 1; // لأن الفهرس يبدأ من 0
-        option.textContent = `Question ${i}`;
-        questionSelect.appendChild(option);
-    }
+  questionSelect.innerHTML = ''; // Clear old options
+  for (let i = 1; i <= questions.length; i++) {
+    const option = document.createElement('option');
+    option.value = i - 1; // Convert to 0-based index
+    option.textContent = `Question ${i}`;
+    questionSelect.appendChild(option);
+  }
 }
 
-// إظهار/إخفاء قائمة الانتقال
 jumpBtn.addEventListener('click', () => {
-    jumpMenu.style.display = 'block';
-    populateQuestionSelect();
-    questionSelect.value = currentQuestionIndex; // حدد السؤال الحالي كافتراضي
+  jumpMenu.style.display = 'block';
+  populateQuestionSelect();
+  questionSelect.value = currentQuestionIndex; // Pre-select current question
 });
 
 cancelJumpBtn.addEventListener('click', () => {
-    jumpMenu.style.display = 'none';
+  jumpMenu.style.display = 'none';
 });
 
 goToBtn.addEventListener('click', () => {
-    const newIndex = parseInt(questionSelect.value);
-    if (newIndex >= 0 && newIndex < questions.length) {
-        currentQuestionIndex = newIndex;
-        displayQuestion();
-        updateProgressBar();
-        updateNavigationButtons();
-        jumpMenu.style.display = 'none';
-    }
+  const newIndex = parseInt(questionSelect.value);
+  if (newIndex >= 0 && newIndex < questions.length) {
+    currentQuestionIndex = newIndex;
+    displayQuestion();
+    updateProgressBar();
+    updateNavigationButtons();
+    jumpMenu.style.display = 'none';
+  }
 });
 
 // Add event listeners
